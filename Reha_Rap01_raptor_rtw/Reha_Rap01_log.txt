@@ -6,10 +6,10 @@
  
 ### Performing model update...
 [Warning: Transmit Queue (16) in CAN Definition block should be greater than Max Lists per DAQ (20) in XCP Definition block for CAN1]
-### Model update completed... (0.4 seconds) 
+### Model update completed... (0.5 seconds) 
 ### Building with Raptor_2021b_1.0.14409...
 ### Building with MATLAB R2021b(x64)...
-### Current Time: Sep 08, 2022 15:37:00
+### Current Time: Sep 08, 2022 16:15:58
 ### Raptor IO Customization for Target: ECM-1793-196-1503...
 Processing with raptor_rlc... 
 Processing : raptor_gen_datastores.rlc... 
@@ -103,21 +103,23 @@ Processing : ECU-1793-196-1503_ertTemplate.rlc...
 ### Using System Target File: C:\Program Files (x86)\NewEagle\Raptor\2021b_1.0.14409\build\raptor.tlc
         ### Loading TLC function libraries
 .......
+### Generating TLC interface API for custom data
+.
 ### Initial pass through model to cache user defined code
-............
+...........
 ### Caching model source code
 ...............................................................................
-..
+...
 ### Writing header file Reha_Rap01_types.h
+.
 ### Writing header file Reha_Rap01.h
 ### Writing source file Reha_Rap01.c
-.
 ### Writing header file rtwtypes.h
 ### Writing header file zero_crossing_types.h
 ### Writing header file Reha_Rap01_private.h
+.
 ### Writing source file Reha_Rap01_data.c
 ### TLC code generation complete.
-.
 ### Found Timed Triggers
 Timer_ooqlV, Interval : Foreground
 Timer_BGND_G6Wyo, Interval : Background
@@ -139,7 +141,7 @@ can_process_rx_queue_CAN1, Interval : Foreground
 ### Real-Time Workshop, exiting...
 
 ### Building source files...
-### Beginning Build for Reha_Rap01_002 ... 
+### Beginning Build for Reha_Rap01_003 ... 
         1 file(s) copied. 
 #-------------------------------------------- 
 # Compiling... 
@@ -149,8 +151,8 @@ can_process_rx_queue_CAN1, Interval : Foreground
 # Compiling source file : hw_user.c 
 # Compiling source file : raptorcrc.c 
 # Compiling source file : raptor_delta_time.c 
-# Compiling source file : reha_rap01.c 
 # Compiling source file : reha_rap01_data.c 
+# Compiling source file : reha_rap01.c 
 # Compiling source file : time.c 
 # Compiling source file : timer_bgnd_g6wyo.c 
 # Compiling source file : timer_ooqlv.c 
@@ -172,16 +174,16 @@ can_process_rx_queue_CAN1, Interval : Foreground
 Generating ASAP2 file... 
 A2L:  Build Dir: C:\MATLAB\Reha_Rap_01\Reha_Rap01_raptor_rtw 
 A2L: Model Name: Reha_Rap01 
-A2L:    SwIDTxt: Reha_Rap01_002 
+A2L:    SwIDTxt: Reha_Rap01_003 
 A2L:     Target: ECM-1793-196-1503 
 Address Mode: SYM 
 Preparing to generate ASAP2 file... 
 Creating ASAP2 file for access level 1... 
 Creating ASAP2 file for access level 4... 
 Creating ASAP2 file for access level RPG... 
-Created ASAP2 file : C:\MATLAB\Reha_Rap_01\Reha_Rap01_raptor_rtw\Reha_Rap01_002_A1.a2l
-Created ASAP2 file : C:\MATLAB\Reha_Rap_01\Reha_Rap01_raptor_rtw\Reha_Rap01_002_A4.a2l
-Created ASAP2 file : C:\MATLAB\Reha_Rap_01\Reha_Rap01_raptor_rtw\Reha_Rap01_002_RPG.a2l
+Created ASAP2 file : C:\MATLAB\Reha_Rap_01\Reha_Rap01_raptor_rtw\Reha_Rap01_003_A1.a2l
+Created ASAP2 file : C:\MATLAB\Reha_Rap_01\Reha_Rap01_raptor_rtw\Reha_Rap01_003_A4.a2l
+Created ASAP2 file : C:\MATLAB\Reha_Rap_01\Reha_Rap01_raptor_rtw\Reha_Rap01_003_RPG.a2l
 settings = 
   struct with fields:
                Target: 'ECM-1793-196-1503'
@@ -202,14 +204,14 @@ settings =
             RaptorDir: 'C:\Program Files (x86)\NewEagle\Raptor\2021b_1.0.14409'
           AddBuildNum: 1
           SetFileName: 0
-             BuildNum: 2
+             BuildNum: 3
         buildLocation: 'Raptor Default'
-              SwIdTxt: 'Reha_Rap01_002'
-             CalIdTxt: 'Reha_Rap01_002_000'
+              SwIdTxt: 'Reha_Rap01_003'
+             CalIdTxt: 'Reha_Rap01_003_000'
          HardwareType: '2954298117'
            IdTableRev: '3'
        ProgramFileExt: 'hex'
-            DateStamp: '08-Sep-2022 15:37:15'
+            DateStamp: '08-Sep-2022 16:16:15'
          OutputHexA2L: 0
           exeLocation: 'C:\MATLAB\Reha_Rap_01\Reha_Rap01_raptor_rtw'
           a2lLocation: 'C:\MATLAB\Reha_Rap_01\Reha_Rap01_raptor_rtw'
@@ -231,11 +233,11 @@ Memory Usage Summary:
                       Reha_Rap01_DWork :      16             Bytes (  0.0 %)
  
 NewEagle.RILPackager v0.0.19.17523
-RPG written to: C:\ECU\rpg\Reha_Rap01_002.rpg
+RPG written to: C:\ECU\rpg\Reha_Rap01_003.rpg
 RILPackager: Finished
  
-Build Number: 2
-Build Time: 33.1 seconds.
+Build Number: 3
+Build Time: 37.3 seconds.
  
 ########################################
 #####   Successful Raptor Build    #####

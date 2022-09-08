@@ -7,7 +7,7 @@
    Copyright (c) 2018 New Eagle Products, Inc.
    All rights reserved.
 
-   Code Generated at: Thu Sep  8 15:37:03 2022
+   Code Generated at: Thu Sep  8 16:16:02 2022
  *****************************************************************************/
 
 #include "rtwtypes.h"
@@ -20,11 +20,11 @@ const uint16_T* Xcp_IdTableRevPtr = &CONSTVariables.IdTableRev;
 Xcp_SlaveId_t Xcp_SlaveIds[] = {
   {
     14,
-    (Xcp_CfgPtr8)"Reha_Rap01_002",
+    (Xcp_CfgPtr8)"Reha_Rap01_003",
     (Xcp_CfgPtr8)&CONSTVariables.HardwareType,
     (Xcp_CfgPtr8)EcuAddr_RAM_Ptr(),
     17,
-    (Xcp_CfgPtr8)"Reha_Rap01_002_A4",
+    (Xcp_CfgPtr8)"Reha_Rap01_003_A4",
     18,
     (Xcp_CfgPtr8)&CONSTVariables.CalIdTxt,
     21,

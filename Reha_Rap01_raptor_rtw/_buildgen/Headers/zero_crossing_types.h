@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Reha_Rap01'.
  *
- * Model version                  : 9.2
+ * Model version                  : 9.3
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Thu Sep  8 15:37:03 2022
+ * C/C++ source code generated on : Thu Sep  8 16:16:02 2022
  *
  * Target selection: raptor.tlc
  * Embedded hardware selection: Infineon->TriCore
