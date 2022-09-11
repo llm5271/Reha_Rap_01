@@ -1,4 +1,6 @@
 -include _buildgen/Dependency_mak/can_can1.mak
+-include _buildgen/Dependency_mak/can_can2.mak
+-include _buildgen/Dependency_mak/can_can3.mak
 -include _buildgen/Dependency_mak/can_general.mak
 -include _buildgen/Dependency_mak/data.mak
 -include _buildgen/Dependency_mak/hw_user.mak

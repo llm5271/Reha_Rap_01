@@ -1,8 +1,8 @@
 <XCP>
-	<project_uid>u9Q03_Ea9UuxWssUNTK0B</project_uid>
+	<project_uid>vE9ymJ6eRUKyE3gj5qX8D</project_uid>
 	<product_id>20037</product_id> <!--XCPProdID -->
 	<canbus>CAN1</canbus>
-	<baudrate>250k</baudrate>
+	<baudrate>500k</baudrate>
 	<rxID>0x200</rxID>
 	<rxID_Type>Standard</rxID_Type>
 	<txID>0x300</txID>

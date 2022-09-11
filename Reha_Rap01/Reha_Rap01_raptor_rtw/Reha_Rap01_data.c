@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Reha_Rap01'.
  *
- * Model version                  : 9.1
+ * Model version                  : 9.32
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Thu Sep  8 15:20:17 2022
+ * C/C++ source code generated on : Sat Sep 10 17:18:14 2022
  *
  * Target selection: raptor.tlc
  * Embedded hardware selection: Infineon->TriCore
@@ -21,7 +21,7 @@
 /* Constant parameters (default storage) */
 const ConstParam_Reha_Rap01 Reha_Rap01_ConstP = {
   /* Computed Parameter: Logic_table
-   * Referenced by: '<S5>/Logic'
+   * Referenced by: '<S6>/Logic'
    */
   { false, true, false, false, true, true, false, false }
 };

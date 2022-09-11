@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
     <Data>
         <Item Name="FgndTasksStopped">
-            <Block>&lt;S6&gt;/raptor_data_def</Block>
+            <Block>&lt;S7&gt;/raptor_data_def</Block>
             <Variable>RAMVariables.FgndTasksStopped</Variable>	
             <Type>Measurement</Type>
             <NumRows>1</NumRows>
@@ -18,7 +18,7 @@
             <Function>Diagnostics|PowerUp_Down</Function>
         </Item>
         <Item Name="KeySwHiTimeThr">
-            <Block>&lt;S5&gt;/raptor_adjustment3</Block>
+            <Block>&lt;S6&gt;/raptor_adjustment3</Block>
             <Variable>EEVariables_DEFAULT.KeySwHiTimeThr</Variable>	
             <Type>Adjustment</Type>
             <NumRows>1</NumRows>
@@ -35,7 +35,7 @@
             <Function>Diagnostics|PowerUp_Down</Function>
         </Item>
         <Item Name="KeySwLoTimeThr">
-            <Block>&lt;S5&gt;/raptor_adjustment4</Block>
+            <Block>&lt;S6&gt;/raptor_adjustment4</Block>
             <Variable>EEVariables_DEFAULT.KeySwLoTimeThr</Variable>	
             <Type>Adjustment</Type>
             <NumRows>1</NumRows>
@@ -52,7 +52,7 @@
             <Function>Diagnostics|PowerUp_Down</Function>
         </Item>
         <Item Name="KeySw_Bgnd">
-            <Block>&lt;S4&gt;/raptor_data_def</Block>
+            <Block>&lt;S5&gt;/raptor_data_def</Block>
             <Variable>RAMVariables.KeySw_Bgnd</Variable>	
             <Type>Measurement</Type>
             <NumRows>1</NumRows>
@@ -69,7 +69,7 @@
             <Function>Diagnostics|PowerUp_Down</Function>
         </Item>
         <Item Name="KeepModuleOn">
-            <Block>&lt;S4&gt;/raptor_data_def1</Block>
+            <Block>&lt;S5&gt;/raptor_data_def1</Block>
             <Variable>RAMVariables.KeepModuleOn</Variable>	
             <Type>Measurement</Type>
             <NumRows>1</NumRows>
@@ -101,6 +101,74 @@
             <AccessLevel>4</AccessLevel>
             <ReadOnly>0</ReadOnly>
             <Function>Reha_Rap01|Foreground</Function>
+        </Item>
+        <Item Name="my_val3_moni">
+            <Block>&lt;S4&gt;/raptor_measurement</Block>
+            <Variable>RAMVariables.my_val3_moni</Variable>	
+            <Type>Measurement</Type>
+            <NumRows>1</NumRows>
+            <NumCols>1</NumCols>
+            <Gain>1.0</Gain>
+            <Offset>0.0</Offset>					
+            <Min>rtMinusInf</Min>
+            <Max>rtInf</Max>
+            <Unit></Unit>
+            <Help></Help>
+			<Format>5.2</Format>
+            <AccessLevel>1</AccessLevel>
+            <ReadOnly>0</ReadOnly>
+            <Function>Reha_Rap01|Foreground|Subsystem_Reference</Function>
+        </Item>
+        <Item Name="my_val5_moni">
+            <Block>&lt;S4&gt;/raptor_measurement2</Block>
+            <Variable>RAMVariables.my_val5_moni</Variable>	
+            <Type>Measurement</Type>
+            <NumRows>1</NumRows>
+            <NumCols>1</NumCols>
+            <Gain>1.0</Gain>
+            <Offset>0.0</Offset>					
+            <Min>rtMinusInf</Min>
+            <Max>rtInf</Max>
+            <Unit></Unit>
+            <Help></Help>
+			<Format>5.2</Format>
+            <AccessLevel>1</AccessLevel>
+            <ReadOnly>0</ReadOnly>
+            <Function>Reha_Rap01|Foreground|Subsystem_Reference</Function>
+        </Item>
+        <Item Name="my_val4_moni">
+            <Block>&lt;S4&gt;/raptor_measurement1</Block>
+            <Variable>RAMVariables.my_val4_moni</Variable>	
+            <Type>Measurement</Type>
+            <NumRows>1</NumRows>
+            <NumCols>1</NumCols>
+            <Gain>1.0</Gain>
+            <Offset>0.0</Offset>					
+            <Min>rtMinusInf</Min>
+            <Max>rtInf</Max>
+            <Unit></Unit>
+            <Help></Help>
+			<Format>5.2</Format>
+            <AccessLevel>1</AccessLevel>
+            <ReadOnly>0</ReadOnly>
+            <Function>Reha_Rap01|Foreground|Subsystem_Reference</Function>
+        </Item>
+        <Item Name="CalByRap">
+            <Block>&lt;S4&gt;/raptor_adjustment</Block>
+            <Variable>EEVariables_DEFAULT.CalByRap</Variable>	
+            <Type>Adjustment</Type>
+            <NumRows>1</NumRows>
+            <NumCols>1</NumCols>
+            <Gain>1.0</Gain>
+            <Offset>0.0</Offset>					
+            <Min>rtMinusInf</Min>
+            <Max>rtInf</Max>
+            <Unit></Unit>
+            <Help></Help>
+			<Format>5.2</Format>
+            <AccessLevel>1</AccessLevel>
+            <ReadOnly>0</ReadOnly>
+            <Function>Reha_Rap01|Foreground|Subsystem_Reference</Function>
         </Item>
         <Item Name="CAN1__XCP_BC_ID">
             <Block>&lt;S3&gt;/BC_ID</Block>
@@ -495,6 +563,261 @@
             <AccessLevel>1</AccessLevel>
             <ReadOnly>0</ReadOnly>
             <Function>System | CAN</Function>
+        </Item>
+        <Item Name="CAN2_CANTX_QueueOverrun">
+            <Block>&lt;Root&gt;/raptor_can_def1</Block>
+            <Variable>RAMVariables.CAN2_CANTX_QueueOverrun</Variable>	
+            <Type>Measurement</Type>
+            <NumRows>1</NumRows>
+            <NumCols>1</NumCols>
+            <Gain>1.0</Gain>
+            <Offset>0.0</Offset>					
+            <Min>0</Min>
+            <Max>255</Max>
+            <Unit>cnt</Unit>
+            <Help>Number of times the CAN2 transmission queue has overrun.</Help>
+			<Format>6.0</Format>
+            <AccessLevel>1</AccessLevel>
+            <ReadOnly>0</ReadOnly>
+            <Function>System | CAN</Function>
+        </Item>
+        <Item Name="CAN2_CANTX_QueueCount">
+            <Block>&lt;Root&gt;/raptor_can_def1</Block>
+            <Variable>RAMVariables.CAN2_CANTX_QueueCount</Variable>	
+            <Type>Measurement</Type>
+            <NumRows>1</NumRows>
+            <NumCols>1</NumCols>
+            <Gain>1.0</Gain>
+            <Offset>0.0</Offset>					
+            <Min>0</Min>
+            <Max>100.0</Max>
+            <Unit>cnt</Unit>
+            <Help>Number of messages currently in CAN2 transmission queue.</Help>
+			<Format>6.0</Format>
+            <AccessLevel>1</AccessLevel>
+            <ReadOnly>0</ReadOnly>
+            <Function>System | CAN</Function>
+        </Item>
+        <Item Name="CAN2_CANTX_QueueMax">
+            <Block>&lt;Root&gt;/raptor_can_def1</Block>
+            <Variable>RAMVariables.CAN2_CANTX_QueueMax</Variable>	
+            <Type>Measurement</Type>
+            <NumRows>1</NumRows>
+            <NumCols>1</NumCols>
+            <Gain>1.0</Gain>
+            <Offset>0.0</Offset>					
+            <Min>0</Min>
+            <Max>100.0</Max>
+            <Unit>cnt</Unit>
+            <Help>Max number of messages seen in CAN2 transmission queue.</Help>
+			<Format>6.0</Format>
+            <AccessLevel>1</AccessLevel>
+            <ReadOnly>0</ReadOnly>
+            <Function>System | CAN</Function>
+        </Item>
+        <Item Name="CAN2_Startup_Delay">
+            <Block>&lt;Root&gt;/raptor_can_def1</Block>
+            <Variable>EEVariables_DEFAULT.CAN2_Startup_Delay</Variable>	
+            <Type>Adjustment</Type>
+            <NumRows>1</NumRows>
+            <NumCols>1</NumCols>
+            <Gain>1.0</Gain>
+            <Offset>0.0</Offset>					
+            <Min>20</Min>
+            <Max>60000</Max>
+            <Unit>ms</Unit>
+            <Help>Delay before starting send/receive to allow bus conditions to settle out after powerup.</Help>
+			<Format>4.0</Format>
+            <AccessLevel>1</AccessLevel>
+            <ReadOnly>0</ReadOnly>
+            <Function>System | CAN</Function>
+        </Item>
+        <Item Name="CAN2_ErrorCheck_Interval">
+            <Block>&lt;Root&gt;/raptor_can_def1</Block>
+            <Variable>EEVariables_DEFAULT.CAN2_ErrorCheck_Interval</Variable>	
+            <Type>Adjustment</Type>
+            <NumRows>1</NumRows>
+            <NumCols>1</NumCols>
+            <Gain>1.0</Gain>
+            <Offset>0.0</Offset>					
+            <Min>0</Min>
+            <Max>255</Max>
+            <Unit>ms</Unit>
+            <Help>Frequency interval to check for CAN errors, 0 to disable.</Help>
+			<Format>4.0</Format>
+            <AccessLevel>1</AccessLevel>
+            <ReadOnly>0</ReadOnly>
+            <Function>System | CAN</Function>
+        </Item>
+        <Item Name="CAN2_ErrorPassive_Delay">
+            <Block>&lt;Root&gt;/raptor_can_def1</Block>
+            <Variable>EEVariables_DEFAULT.CAN2_ErrorPassive_Delay</Variable>	
+            <Type>Adjustment</Type>
+            <NumRows>1</NumRows>
+            <NumCols>1</NumCols>
+            <Gain>1.0</Gain>
+            <Offset>0.0</Offset>					
+            <Min>0</Min>
+            <Max>255</Max>
+            <Unit>ms</Unit>
+            <Help>Delay before restart after Error passive detected.</Help>
+			<Format>4.0</Format>
+            <AccessLevel>1</AccessLevel>
+            <ReadOnly>0</ReadOnly>
+            <Function>System | CAN</Function>
+        </Item>
+        <Item Name="CAN3_CANTX_QueueOverrun">
+            <Block>&lt;Root&gt;/raptor_can_def2</Block>
+            <Variable>RAMVariables.CAN3_CANTX_QueueOverrun</Variable>	
+            <Type>Measurement</Type>
+            <NumRows>1</NumRows>
+            <NumCols>1</NumCols>
+            <Gain>1.0</Gain>
+            <Offset>0.0</Offset>					
+            <Min>0</Min>
+            <Max>255</Max>
+            <Unit>cnt</Unit>
+            <Help>Number of times the CAN3 transmission queue has overrun.</Help>
+			<Format>6.0</Format>
+            <AccessLevel>1</AccessLevel>
+            <ReadOnly>0</ReadOnly>
+            <Function>System | CAN</Function>
+        </Item>
+        <Item Name="CAN3_CANTX_QueueCount">
+            <Block>&lt;Root&gt;/raptor_can_def2</Block>
+            <Variable>RAMVariables.CAN3_CANTX_QueueCount</Variable>	
+            <Type>Measurement</Type>
+            <NumRows>1</NumRows>
+            <NumCols>1</NumCols>
+            <Gain>1.0</Gain>
+            <Offset>0.0</Offset>					
+            <Min>0</Min>
+            <Max>100.0</Max>
+            <Unit>cnt</Unit>
+            <Help>Number of messages currently in CAN3 transmission queue.</Help>
+			<Format>6.0</Format>
+            <AccessLevel>1</AccessLevel>
+            <ReadOnly>0</ReadOnly>
+            <Function>System | CAN</Function>
+        </Item>
+        <Item Name="CAN3_CANTX_QueueMax">
+            <Block>&lt;Root&gt;/raptor_can_def2</Block>
+            <Variable>RAMVariables.CAN3_CANTX_QueueMax</Variable>	
+            <Type>Measurement</Type>
+            <NumRows>1</NumRows>
+            <NumCols>1</NumCols>
+            <Gain>1.0</Gain>
+            <Offset>0.0</Offset>					
+            <Min>0</Min>
+            <Max>100.0</Max>
+            <Unit>cnt</Unit>
+            <Help>Max number of messages seen in CAN3 transmission queue.</Help>
+			<Format>6.0</Format>
+            <AccessLevel>1</AccessLevel>
+            <ReadOnly>0</ReadOnly>
+            <Function>System | CAN</Function>
+        </Item>
+        <Item Name="CAN3_Startup_Delay">
+            <Block>&lt;Root&gt;/raptor_can_def2</Block>
+            <Variable>EEVariables_DEFAULT.CAN3_Startup_Delay</Variable>	
+            <Type>Adjustment</Type>
+            <NumRows>1</NumRows>
+            <NumCols>1</NumCols>
+            <Gain>1.0</Gain>
+            <Offset>0.0</Offset>					
+            <Min>20</Min>
+            <Max>60000</Max>
+            <Unit>ms</Unit>
+            <Help>Delay before starting send/receive to allow bus conditions to settle out after powerup.</Help>
+			<Format>4.0</Format>
+            <AccessLevel>1</AccessLevel>
+            <ReadOnly>0</ReadOnly>
+            <Function>System | CAN</Function>
+        </Item>
+        <Item Name="CAN3_ErrorCheck_Interval">
+            <Block>&lt;Root&gt;/raptor_can_def2</Block>
+            <Variable>EEVariables_DEFAULT.CAN3_ErrorCheck_Interval</Variable>	
+            <Type>Adjustment</Type>
+            <NumRows>1</NumRows>
+            <NumCols>1</NumCols>
+            <Gain>1.0</Gain>
+            <Offset>0.0</Offset>					
+            <Min>0</Min>
+            <Max>255</Max>
+            <Unit>ms</Unit>
+            <Help>Frequency interval to check for CAN errors, 0 to disable.</Help>
+			<Format>4.0</Format>
+            <AccessLevel>1</AccessLevel>
+            <ReadOnly>0</ReadOnly>
+            <Function>System | CAN</Function>
+        </Item>
+        <Item Name="CAN3_ErrorPassive_Delay">
+            <Block>&lt;Root&gt;/raptor_can_def2</Block>
+            <Variable>EEVariables_DEFAULT.CAN3_ErrorPassive_Delay</Variable>	
+            <Type>Adjustment</Type>
+            <NumRows>1</NumRows>
+            <NumCols>1</NumCols>
+            <Gain>1.0</Gain>
+            <Offset>0.0</Offset>					
+            <Min>0</Min>
+            <Max>255</Max>
+            <Unit>ms</Unit>
+            <Help>Delay before restart after Error passive detected.</Help>
+			<Format>4.0</Format>
+            <AccessLevel>1</AccessLevel>
+            <ReadOnly>0</ReadOnly>
+            <Function>System | CAN</Function>
+        </Item>
+        <Item Name="my_val3">
+            <Block></Block>
+            <Variable>EEVariables_DEFAULT.my_val3</Variable>	
+            <Type>Adjustment</Type>
+            <NumRows>1</NumRows>
+            <NumCols>1</NumCols>
+            <Gain>1.0</Gain>
+            <Offset>0.0</Offset>					
+            <Min>0.0</Min>
+            <Max>100.0</Max>
+            <Unit>V</Unit>
+            <Help>Test calibration</Help>
+			<Format>5.2</Format>
+            <AccessLevel>1</AccessLevel>
+            <ReadOnly>0</ReadOnly>
+            <Function>Adjustments</Function>
+        </Item>
+        <Item Name="my_val4">
+            <Block></Block>
+            <Variable>EEVariables_DEFAULT.my_val4</Variable>	
+            <Type>Adjustment</Type>
+            <NumRows>1</NumRows>
+            <NumCols>1</NumCols>
+            <Gain>1.0</Gain>
+            <Offset>0.0</Offset>					
+            <Min>0.0</Min>
+            <Max>100.0</Max>
+            <Unit>V</Unit>
+            <Help>Test calibration</Help>
+			<Format>5.2</Format>
+            <AccessLevel>1</AccessLevel>
+            <ReadOnly>0</ReadOnly>
+            <Function>Adjustments</Function>
+        </Item>
+        <Item Name="my_val5">
+            <Block></Block>
+            <Variable>EEVariables_DEFAULT.my_val5</Variable>	
+            <Type>Adjustment</Type>
+            <NumRows>1</NumRows>
+            <NumCols>1</NumCols>
+            <Gain>1.0</Gain>
+            <Offset>0.0</Offset>					
+            <Min>rtMinusInf</Min>
+            <Max>rtInf</Max>
+            <Unit></Unit>
+            <Help></Help>
+			<Format>5.2</Format>
+            <AccessLevel>1</AccessLevel>
+            <ReadOnly>0</ReadOnly>
+            <Function>Adjustments</Function>
         </Item>
         <Item Name="SyC_tiPostDrvMax_C">
             <Block>Platform Variable</Block>

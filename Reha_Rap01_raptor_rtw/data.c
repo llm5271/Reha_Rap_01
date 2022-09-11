@@ -7,7 +7,7 @@
    Copyright (c) 2018 New Eagle Products, Inc.
    All rights reserved.
 
-   Code Generated at: Thu Sep  8 16:16:02 2022
+   Code Generated at: Sat Sep 10 10:56:17 2022
  *****************************************************************************/
 
 #include "raptor_types.h"
@@ -64,25 +64,25 @@ void initRAMVariables(RAMVariables_T* ramVariables)
 
 const CONSTVariables_T CONSTVariables = {
   { 82U, 101U, 104U, 97U, 95U, 82U, 97U, 112U, 48U, 49U, },/* ModelName */
-  3UL,                                 /* BuildNumber */
+  5UL,                                 /* BuildNumber */
 
   { 40U, 82U, 50U, 48U, 50U, 49U, 98U, 41U, 32U, 57U, 46U, 49U, 49U, },/* MatlabVersion */
 
   { 50U, 48U, 50U, 49U, 98U, 95U, 49U, 46U, 48U, 46U, 49U, 52U, 52U, 48U, 57U,
     95U, 54U, 49U, 49U, 53U, },        /* RaptorVersion */
 
-  { 82U, 101U, 104U, 97U, 95U, 82U, 97U, 112U, 48U, 49U, 95U, 48U, 48U, 51U, },/* SwIdTxt */
+  { 82U, 101U, 104U, 97U, 95U, 82U, 97U, 112U, 48U, 49U, 95U, 48U, 48U, 53U, },/* SwIdTxt */
 
-  { 82U, 101U, 104U, 97U, 95U, 82U, 97U, 112U, 48U, 49U, 95U, 48U, 48U, 51U, 95U,
+  { 82U, 101U, 104U, 97U, 95U, 82U, 97U, 112U, 48U, 49U, 95U, 48U, 48U, 53U, 95U,
     48U, 48U, 48U, },                  /* CalIdTxt */
 
-  { 87U, 95U, 88U, 78U, 109U, 98U, 115U, 78U, 107U, 85U, 105U, 68U, 70U, 99U,
-    77U, 72U, 65U, 84U, 99U, 118U, 103U, },/* BuildUID */
+  { 85U, 71U, 56U, 118U, 113U, 73U, 68U, 88U, 97U, 48U, 113U, 56U, 101U, 80U,
+    74U, 108U, 87U, 82U, 74U, 66U, 70U, },/* BuildUID */
   3,                                   /* IdTableRev */
   2954298117UL,                        /* HardwareType */
 
-  { 48U, 56U, 45U, 83U, 101U, 112U, 45U, 50U, 48U, 50U, 50U, 32U, 49U, 54U, 58U,
-    49U, 54U, 58U, 48U, 50U, },        /* DateStamp */
+  { 49U, 48U, 45U, 83U, 101U, 112U, 45U, 50U, 48U, 50U, 50U, 32U, 49U, 48U, 58U,
+    53U, 54U, 58U, 49U, 56U, },        /* DateStamp */
 };
 
 #define STOP_SECTION_Const_oem_32bit

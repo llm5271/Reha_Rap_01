@@ -7,7 +7,7 @@
    Copyright (c) 2018 New Eagle Products, Inc.
    All rights reserved.
 
-   Code Generated at: Thu Sep  8 15:20:17 2022
+   Code Generated at: Sat Sep 10 17:18:14 2022
  *****************************************************************************/
 
 #ifndef __DATA_H
@@ -46,6 +46,9 @@ typedef struct {
   boolean_T KeySw_Bgnd;                /* Type : boolean_T, Storage : RAM,  */
   boolean_T KeepModuleOn;              /* Type : boolean_T, Storage : RAM,  */
   real32_T Counter;                    /* Type : real32_T, Storage : RAM,  */
+  real32_T my_val3_moni;               /* Type : real32_T, Storage : RAM,  */
+  real32_T my_val5_moni;               /* Type : real32_T, Storage : RAM,  */
+  real32_T my_val4_moni;               /* Type : real32_T, Storage : RAM,  */
   uint32_T EcuAddr_RAM;                /* Type : uint32_T, Storage : RAM,  */
   uint8_T CAN1_CANTX_QueueOverrun;     /* Type : uint8_T, Storage : RAM,  */
   uint8_T CAN1_CANTX_QueueCount;       /* Type : uint8_T, Storage : RAM,  */
@@ -53,6 +56,12 @@ typedef struct {
   uint8_T CAN1_CANRX_QueueOverrun;     /* Type : uint8_T, Storage : RAM,  */
   uint8_T CAN1_CANRX_QueueCount;       /* Type : uint8_T, Storage : RAM,  */
   uint8_T CAN1_CANRX_QueueMax;         /* Type : uint8_T, Storage : RAM,  */
+  uint8_T CAN2_CANTX_QueueOverrun;     /* Type : uint8_T, Storage : RAM,  */
+  uint8_T CAN2_CANTX_QueueCount;       /* Type : uint8_T, Storage : RAM,  */
+  uint8_T CAN2_CANTX_QueueMax;         /* Type : uint8_T, Storage : RAM,  */
+  uint8_T CAN3_CANTX_QueueOverrun;     /* Type : uint8_T, Storage : RAM,  */
+  uint8_T CAN3_CANTX_QueueCount;       /* Type : uint8_T, Storage : RAM,  */
+  uint8_T CAN3_CANTX_QueueMax;         /* Type : uint8_T, Storage : RAM,  */
   uint8_T EEPROM_State;                /* Type : uint8_T, Storage : RAM,  */
 } RAMVariables_T;
 
@@ -115,6 +124,7 @@ typedef struct {
   uint32_T EE_UniqID;
   real32_T KeySwHiTimeThr;             /* Type : real32_T, Storage : CAL */
   real32_T KeySwLoTimeThr;             /* Type : real32_T, Storage : CAL */
+  real32_T CalByRap;                   /* Type : real32_T, Storage : CAL */
   uint32_T CAN1__XCP_BC_ID;            /* Type : uint32_T, Storage : CAL */
   uint32_T CAN1__XCP_RX_ID;            /* Type : uint32_T, Storage : CAL */
   uint32_T CAN1__XCP_TX_ID;            /* Type : uint32_T, Storage : CAL */
@@ -122,6 +132,15 @@ typedef struct {
   uint16_T CAN1_Startup_Delay;         /* Type : uint16_T, Storage : CAL */
   uint8_T CAN1_ErrorCheck_Interval;    /* Type : uint8_T, Storage : CAL */
   uint8_T CAN1_ErrorPassive_Delay;     /* Type : uint8_T, Storage : CAL */
+  uint16_T CAN2_Startup_Delay;         /* Type : uint16_T, Storage : CAL */
+  uint8_T CAN2_ErrorCheck_Interval;    /* Type : uint8_T, Storage : CAL */
+  uint8_T CAN2_ErrorPassive_Delay;     /* Type : uint8_T, Storage : CAL */
+  uint16_T CAN3_Startup_Delay;         /* Type : uint16_T, Storage : CAL */
+  uint8_T CAN3_ErrorCheck_Interval;    /* Type : uint8_T, Storage : CAL */
+  uint8_T CAN3_ErrorPassive_Delay;     /* Type : uint8_T, Storage : CAL */
+  real32_T my_val3;                    /* Type : real32_T, Storage : CAL */
+  real32_T my_val4;                    /* Type : real32_T, Storage : CAL */
+  real32_T my_val5;                    /* Type : real32_T, Storage : CAL */
   uint8_T InjCDrv_EndOfStart;          /* Type : uint8_T, Storage : CAL */
   uint8_T EndOfStart;                  /* Type : uint8_T, Storage : CAL */
   uint16_T CRC;
@@ -164,6 +183,18 @@ extern void App_EE_Defaults(void);
 #define Counter_Data()                 (RAMVariables.Counter)
 #define Counter_Ptr()                  (&(RAMVariables.Counter))
 #define Counter_ELEMENTS()             (1 * 1)
+#define my_val3_moni_Data()            (RAMVariables.my_val3_moni)
+#define my_val3_moni_Ptr()             (&(RAMVariables.my_val3_moni))
+#define my_val3_moni_ELEMENTS()        (1 * 1)
+#define my_val5_moni_Data()            (RAMVariables.my_val5_moni)
+#define my_val5_moni_Ptr()             (&(RAMVariables.my_val5_moni))
+#define my_val5_moni_ELEMENTS()        (1 * 1)
+#define my_val4_moni_Data()            (RAMVariables.my_val4_moni)
+#define my_val4_moni_Ptr()             (&(RAMVariables.my_val4_moni))
+#define my_val4_moni_ELEMENTS()        (1 * 1)
+#define CalByRap_Data()                (EEVariables_RAMShadow.CalByRap)
+#define CalByRap_Ptr()                 (&(EEVariables_RAMShadow.CalByRap))
+#define CalByRap_ELEMENTS()            (1 * 1)
 #define CAN1__XCP_BC_ID_Data()         (EEVariables_RAMShadow.CAN1__XCP_BC_ID)
 #define CAN1__XCP_BC_ID_Ptr()          (&(EEVariables_RAMShadow.CAN1__XCP_BC_ID))
 #define CAN1__XCP_BC_ID_ELEMENTS()     (1 * 1)
@@ -236,6 +267,51 @@ extern void App_EE_Defaults(void);
 #define CAN1_ErrorPassive_Delay_Data() (EEVariables_RAMShadow.CAN1_ErrorPassive_Delay)
 #define CAN1_ErrorPassive_Delay_Ptr()  (&(EEVariables_RAMShadow.CAN1_ErrorPassive_Delay))
 #define CAN1_ErrorPassive_Delay_ELEMENTS() (1 * 1)
+#define CAN2_CANTX_QueueOverrun_Data() (RAMVariables.CAN2_CANTX_QueueOverrun)
+#define CAN2_CANTX_QueueOverrun_Ptr()  (&(RAMVariables.CAN2_CANTX_QueueOverrun))
+#define CAN2_CANTX_QueueOverrun_ELEMENTS() (1 * 1)
+#define CAN2_CANTX_QueueCount_Data()   (RAMVariables.CAN2_CANTX_QueueCount)
+#define CAN2_CANTX_QueueCount_Ptr()    (&(RAMVariables.CAN2_CANTX_QueueCount))
+#define CAN2_CANTX_QueueCount_ELEMENTS() (1 * 1)
+#define CAN2_CANTX_QueueMax_Data()     (RAMVariables.CAN2_CANTX_QueueMax)
+#define CAN2_CANTX_QueueMax_Ptr()      (&(RAMVariables.CAN2_CANTX_QueueMax))
+#define CAN2_CANTX_QueueMax_ELEMENTS() (1 * 1)
+#define CAN2_Startup_Delay_Data()      (EEVariables_RAMShadow.CAN2_Startup_Delay)
+#define CAN2_Startup_Delay_Ptr()       (&(EEVariables_RAMShadow.CAN2_Startup_Delay))
+#define CAN2_Startup_Delay_ELEMENTS()  (1 * 1)
+#define CAN2_ErrorCheck_Interval_Data() (EEVariables_RAMShadow.CAN2_ErrorCheck_Interval)
+#define CAN2_ErrorCheck_Interval_Ptr() (&(EEVariables_RAMShadow.CAN2_ErrorCheck_Interval))
+#define CAN2_ErrorCheck_Interval_ELEMENTS() (1 * 1)
+#define CAN2_ErrorPassive_Delay_Data() (EEVariables_RAMShadow.CAN2_ErrorPassive_Delay)
+#define CAN2_ErrorPassive_Delay_Ptr()  (&(EEVariables_RAMShadow.CAN2_ErrorPassive_Delay))
+#define CAN2_ErrorPassive_Delay_ELEMENTS() (1 * 1)
+#define CAN3_CANTX_QueueOverrun_Data() (RAMVariables.CAN3_CANTX_QueueOverrun)
+#define CAN3_CANTX_QueueOverrun_Ptr()  (&(RAMVariables.CAN3_CANTX_QueueOverrun))
+#define CAN3_CANTX_QueueOverrun_ELEMENTS() (1 * 1)
+#define CAN3_CANTX_QueueCount_Data()   (RAMVariables.CAN3_CANTX_QueueCount)
+#define CAN3_CANTX_QueueCount_Ptr()    (&(RAMVariables.CAN3_CANTX_QueueCount))
+#define CAN3_CANTX_QueueCount_ELEMENTS() (1 * 1)
+#define CAN3_CANTX_QueueMax_Data()     (RAMVariables.CAN3_CANTX_QueueMax)
+#define CAN3_CANTX_QueueMax_Ptr()      (&(RAMVariables.CAN3_CANTX_QueueMax))
+#define CAN3_CANTX_QueueMax_ELEMENTS() (1 * 1)
+#define CAN3_Startup_Delay_Data()      (EEVariables_RAMShadow.CAN3_Startup_Delay)
+#define CAN3_Startup_Delay_Ptr()       (&(EEVariables_RAMShadow.CAN3_Startup_Delay))
+#define CAN3_Startup_Delay_ELEMENTS()  (1 * 1)
+#define CAN3_ErrorCheck_Interval_Data() (EEVariables_RAMShadow.CAN3_ErrorCheck_Interval)
+#define CAN3_ErrorCheck_Interval_Ptr() (&(EEVariables_RAMShadow.CAN3_ErrorCheck_Interval))
+#define CAN3_ErrorCheck_Interval_ELEMENTS() (1 * 1)
+#define CAN3_ErrorPassive_Delay_Data() (EEVariables_RAMShadow.CAN3_ErrorPassive_Delay)
+#define CAN3_ErrorPassive_Delay_Ptr()  (&(EEVariables_RAMShadow.CAN3_ErrorPassive_Delay))
+#define CAN3_ErrorPassive_Delay_ELEMENTS() (1 * 1)
+#define my_val3_Data()                 (EEVariables_RAMShadow.my_val3)
+#define my_val3_Ptr()                  (&(EEVariables_RAMShadow.my_val3))
+#define my_val3_ELEMENTS()             (1 * 1)
+#define my_val4_Data()                 (EEVariables_RAMShadow.my_val4)
+#define my_val4_Ptr()                  (&(EEVariables_RAMShadow.my_val4))
+#define my_val4_ELEMENTS()             (1 * 1)
+#define my_val5_Data()                 (EEVariables_RAMShadow.my_val5)
+#define my_val5_Ptr()                  (&(EEVariables_RAMShadow.my_val5))
+#define my_val5_ELEMENTS()             (1 * 1)
 #define InjCDrv_EndOfStart_Data()      (EEVariables_RAMShadow.InjCDrv_EndOfStart)
 #define InjCDrv_EndOfStart_Ptr()       (&(EEVariables_RAMShadow.InjCDrv_EndOfStart))
 #define InjCDrv_EndOfStart_ELEMENTS()  (1 * 1)
@@ -250,5 +326,5 @@ extern void App_EE_Defaults(void);
 
 /***** CAL Locator ********************************************************/
 #define CALLOC_START                   ((void*)KeySwHiTimeThr_Ptr())
-#define CALLOC_LENGTH                  ( sizeof(KeySwHiTimeThr_Data()) + sizeof(KeySwLoTimeThr_Data()) + sizeof(CAN1__XCP_BC_ID_Data()) + sizeof(CAN1__XCP_RX_ID_Data()) + sizeof(CAN1__XCP_TX_ID_Data()) + sizeof(CAN1__XCP_Security_Data()) + sizeof(CAN1_Startup_Delay_Data()) + sizeof(CAN1_ErrorCheck_Interval_Data()) + sizeof(CAN1_ErrorPassive_Delay_Data()) + sizeof(InjCDrv_EndOfStart_Data()) + sizeof(EndOfStart_Data()) + 0)
+#define CALLOC_LENGTH                  ( sizeof(KeySwHiTimeThr_Data()) + sizeof(KeySwLoTimeThr_Data()) + sizeof(CalByRap_Data()) + sizeof(CAN1__XCP_BC_ID_Data()) + sizeof(CAN1__XCP_RX_ID_Data()) + sizeof(CAN1__XCP_TX_ID_Data()) + sizeof(CAN1__XCP_Security_Data()) + sizeof(CAN1_Startup_Delay_Data()) + sizeof(CAN1_ErrorCheck_Interval_Data()) + sizeof(CAN1_ErrorPassive_Delay_Data()) + sizeof(CAN2_Startup_Delay_Data()) + sizeof(CAN2_ErrorCheck_Interval_Data()) + sizeof(CAN2_ErrorPassive_Delay_Data()) + sizeof(CAN3_Startup_Delay_Data()) + sizeof(CAN3_ErrorCheck_Interval_Data()) + sizeof(CAN3_ErrorPassive_Delay_Data()) + sizeof(my_val3_Data()) + sizeof(my_val4_Data()) + sizeof(my_val5_Data()) + sizeof(InjCDrv_EndOfStart_Data()) + sizeof(EndOfStart_Data()) + 0)
 #endif

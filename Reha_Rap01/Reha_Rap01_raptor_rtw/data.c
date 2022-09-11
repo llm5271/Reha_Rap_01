@@ -7,7 +7,7 @@
    Copyright (c) 2018 New Eagle Products, Inc.
    All rights reserved.
 
-   Code Generated at: Thu Sep  8 15:20:17 2022
+   Code Generated at: Sat Sep 10 17:18:14 2022
  *****************************************************************************/
 
 #include "raptor_types.h"
@@ -41,6 +41,9 @@ const RAMVariables_T RAMVariables_DEFAULT = {
   0,                                   /* KeySw_Bgnd */
   0,                                   /* KeepModuleOn */
   0,                                   /* Counter */
+  0,                                   /* my_val3_moni */
+  0,                                   /* my_val5_moni */
+  0,                                   /* my_val4_moni */
   11UL,                                /* EcuAddr_RAM */
   0U,                                  /* CAN1_CANTX_QueueOverrun */
   0U,                                  /* CAN1_CANTX_QueueCount */
@@ -48,6 +51,12 @@ const RAMVariables_T RAMVariables_DEFAULT = {
   0U,                                  /* CAN1_CANRX_QueueOverrun */
   0U,                                  /* CAN1_CANRX_QueueCount */
   0U,                                  /* CAN1_CANRX_QueueMax */
+  0U,                                  /* CAN2_CANTX_QueueOverrun */
+  0U,                                  /* CAN2_CANTX_QueueCount */
+  0U,                                  /* CAN2_CANTX_QueueMax */
+  0U,                                  /* CAN3_CANTX_QueueOverrun */
+  0U,                                  /* CAN3_CANTX_QueueCount */
+  0U,                                  /* CAN3_CANTX_QueueMax */
   0U,                                  /* EEPROM_State */
 };
 
@@ -64,25 +73,25 @@ void initRAMVariables(RAMVariables_T* ramVariables)
 
 const CONSTVariables_T CONSTVariables = {
   { 82U, 101U, 104U, 97U, 95U, 82U, 97U, 112U, 48U, 49U, },/* ModelName */
-  1UL,                                 /* BuildNumber */
+  20UL,                                /* BuildNumber */
 
   { 40U, 82U, 50U, 48U, 50U, 49U, 98U, 41U, 32U, 57U, 46U, 49U, 49U, },/* MatlabVersion */
 
   { 50U, 48U, 50U, 49U, 98U, 95U, 49U, 46U, 48U, 46U, 49U, 52U, 52U, 48U, 57U,
     95U, 54U, 49U, 49U, 53U, },        /* RaptorVersion */
 
-  { 82U, 101U, 104U, 97U, 95U, 82U, 97U, 112U, 48U, 49U, 95U, 48U, 48U, 49U, },/* SwIdTxt */
+  { 82U, 101U, 104U, 97U, 95U, 82U, 97U, 112U, 48U, 49U, 95U, 48U, 50U, 48U, },/* SwIdTxt */
 
-  { 82U, 101U, 104U, 97U, 95U, 82U, 97U, 112U, 48U, 49U, 95U, 48U, 48U, 49U, 95U,
+  { 82U, 101U, 104U, 97U, 95U, 82U, 97U, 112U, 48U, 49U, 95U, 48U, 50U, 48U, 95U,
     48U, 48U, 48U, },                  /* CalIdTxt */
 
-  { 117U, 57U, 81U, 48U, 51U, 95U, 69U, 97U, 57U, 85U, 117U, 120U, 87U, 115U,
-    115U, 85U, 78U, 84U, 75U, 48U, 66U, },/* BuildUID */
+  { 118U, 69U, 57U, 121U, 109U, 74U, 54U, 101U, 82U, 85U, 75U, 121U, 69U, 51U,
+    103U, 106U, 53U, 113U, 88U, 56U, 68U, },/* BuildUID */
   3,                                   /* IdTableRev */
   2954298117UL,                        /* HardwareType */
 
-  { 48U, 56U, 45U, 83U, 101U, 112U, 45U, 50U, 48U, 50U, 50U, 32U, 49U, 53U, 58U,
-    50U, 48U, 58U, 49U, 55U, },        /* DateStamp */
+  { 49U, 48U, 45U, 83U, 101U, 112U, 45U, 50U, 48U, 50U, 50U, 32U, 49U, 55U, 58U,
+    49U, 56U, 58U, 49U, 52U, },        /* DateStamp */
 };
 
 #define STOP_SECTION_Const_oem_32bit
@@ -99,15 +108,16 @@ void initCONSTVariables(const CONSTVariables_T* cv)
 
 }
 
-/* Total EEPROM Structure Size: 34U Bytes */
+/* Total EEPROM Structure Size: 58U Bytes */
 #define START_SECTION_Const_oem_32bit
 #include "swsh_rb2oem.h"
 
 const EEVariables_T EEVariables_DEFAULT = {
   0,                                  /* Write Count: Identifies active Copy 	*/
-  3219410521U,                         /* EE_UniqID 	*/
+  3434919473U,                         /* EE_UniqID 	*/
   0.2F,                                /* KeySwHiTimeThr */
   0.2F,                                /* KeySwLoTimeThr */
+  33.0F,                               /* CalByRap */
   256UL,                               /* CAN1__XCP_BC_ID */
   512UL,                               /* CAN1__XCP_RX_ID */
   768UL,                               /* CAN1__XCP_TX_ID */
@@ -115,6 +125,15 @@ const EEVariables_T EEVariables_DEFAULT = {
   500U,                                /* CAN1_Startup_Delay */
   20U,                                 /* CAN1_ErrorCheck_Interval */
   20U,                                 /* CAN1_ErrorPassive_Delay */
+  500U,                                /* CAN2_Startup_Delay */
+  20U,                                 /* CAN2_ErrorCheck_Interval */
+  20U,                                 /* CAN2_ErrorPassive_Delay */
+  500U,                                /* CAN3_Startup_Delay */
+  20U,                                 /* CAN3_ErrorCheck_Interval */
+  20U,                                 /* CAN3_ErrorPassive_Delay */
+  1.9F,                                /* my_val3 */
+  2.2F,                                /* my_val4 */
+  11.0F,                               /* my_val5 */
   1U,                                  /* InjCDrv_EndOfStart */
   1U,                                  /* EndOfStart */
   0,                                   /* CRC Initial Value */

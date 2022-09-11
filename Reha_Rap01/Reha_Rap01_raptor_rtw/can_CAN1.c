@@ -7,13 +7,13 @@
    Copyright (c) 2018 New Eagle Products, Inc.
    All rights reserved.
 
-   Code Generated at: Thu Sep  8 15:20:17 2022
+   Code Generated at: Sat Sep 10 17:18:14 2022
  *****************************************************************************/
 
 /*  CAN Bus : CAN1 	*/
 /*  Resource: CAN1 	*/
 /*  Bus Enum: CAN_BUS_A */
-/* Baud Rate: 250k 	*/
+/* Baud Rate: 500k 	*/
 #include "core_env.h"
 #include "sws_can.h"
 #include "Reha_Rap01.h"
@@ -125,7 +125,7 @@ void pre_start_CAN_CAN1(void)
 void post_start_CAN_CAN1(void)
 {
   uint8 i = 0;
-  swsh_ChangeBaudRate_ini( CAN_BUS_A, CAN_250K_BAUD );
+  swsh_ChangeBaudRate_ini( CAN_BUS_A, CAN_500K_BAUD );
   for (i=0;i<4;i++) {
     canMsgInfo[i].MessageId = 0xF0000000;
     canMsgBuffInUse[i] = 0;
@@ -571,10 +571,10 @@ void can_errorCheck_CAN1(void)
     {
       /* Reinitialize the CAN driver */
       Can_InitNode(CAN_BUS_A);
-      swsh_ChangeBaudRate_ini( CAN_BUS_A, CAN_250K_BAUD );
+      swsh_ChangeBaudRate_ini( CAN_BUS_A, CAN_500K_BAUD );
     } else if (canStatus & 0x800) {
       Can_InitNode(CAN_BUS_A);
-      swsh_ChangeBaudRate_ini( CAN_BUS_A, CAN_250K_BAUD );
+      swsh_ChangeBaudRate_ini( CAN_BUS_A, CAN_500K_BAUD );
       can_CAN1_startupDelay = CAN1_ErrorPassive_Delay_Data();
     }
 

@@ -18,4 +18,5 @@ _buildgen/Objects/data.o: data.c _buildgen/headers/raptor_types.h \
   _buildgen/headers/STD_TYPE.H _buildgen/headers/syc_postdrv_pub.h \
   _buildgen/headers/sws_pwmout.h _buildgen/headers/swadp_pub.h \
   _buildgen/headers/xcp_protocol.h _buildgen/headers/math_defines.h \
-  _buildgen/headers/can_CAN1.h _buildgen/headers/Reha_Rap01_private.h
+  _buildgen/headers/can_CAN1.h _buildgen/headers/can_CAN2.h \
+  _buildgen/headers/can_CAN3.h _buildgen/headers/Reha_Rap01_private.h

@@ -7,7 +7,7 @@
    Copyright (c) 2018 New Eagle Products, Inc.
    All rights reserved.
 
-   Code Generated at: Thu Sep  8 15:20:17 2022
+   Code Generated at: Sat Sep 10 17:18:14 2022
  *****************************************************************************/
 
 #ifndef __CAN_CAN1_H
@@ -16,7 +16,7 @@
 /*  CAN Bus : CAN1 	*/
 /*  Resource: CAN1 	*/
 /*  Bus Enum: CAN_BUS_A */
-/* Baud Rate: 250k 	*/
+/* Baud Rate: 500k 	*/
 
 /* FUNCTION PROTOTYPES */
 /* CAN initialization */

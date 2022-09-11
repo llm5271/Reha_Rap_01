@@ -7,7 +7,7 @@
    Copyright (c) 2018 New Eagle Products, Inc.
    All rights reserved.
 
-   Code Generated at: Thu Sep  8 15:20:17 2022
+   Code Generated at: Sat Sep 10 17:18:14 2022
  *****************************************************************************/
 
 #include "Reha_Rap01.h"
@@ -121,8 +121,12 @@ void NE_ini(void)
 
   /* CAN Bus Initializations */
   pre_start_CAN_CAN1();                /* <Root>/raptor_can_def */
+  pre_start_CAN_CAN2();                /* <Root>/raptor_can_def1 */
+  pre_start_CAN_CAN3();                /* <Root>/raptor_can_def2 */
   swsh_caninit_user (0, &can_init[0]);
   post_start_CAN_CAN1();               /* <Root>/raptor_can_def */
+  post_start_CAN_CAN2();               /* <Root>/raptor_can_def1 */
+  post_start_CAN_CAN3();               /* <Root>/raptor_can_def2 */
   Xcp_Initialize();
   swsh_Write_LSFRiSwitch(21, 0);
   swsh_Write_LSFRiSwitch(22, 0);
@@ -136,6 +140,8 @@ void NE_ini(void)
 void NE_1ms(void)
 {
   can_process_CAN1();                  /* <Root>/raptor_can_def */
+  can_process_CAN2();                  /* <Root>/raptor_can_def1 */
+  can_process_CAN3();                  /* <Root>/raptor_can_def2 */
 }
 
 #define STOP_SECTION_Task_oem_r1ms

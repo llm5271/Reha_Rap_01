@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Reha_Rap01'.
  *
- * Model version                  : 9.1
+ * Model version                  : 9.32
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Thu Sep  8 15:20:17 2022
+ * C/C++ source code generated on : Sat Sep 10 17:18:14 2022
  *
  * Target selection: raptor.tlc
  * Embedded hardware selection: Infineon->TriCore
@@ -32,6 +32,8 @@
 #include "xcp_protocol.h"
 #include "math_defines.h"
 #include "can_CAN1.h"
+#include "can_CAN2.h"
+#include "can_CAN3.h"
 #endif                                 /* Reha_Rap01_COMMON_INCLUDES_ */
 
 #include "Reha_Rap01_types.h"
@@ -41,25 +43,25 @@
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
   real_T UnitDelay_DSTATE;             /* '<S1>/Unit Delay' */
-  real_T UnitDelay_DSTATE_b;           /* '<S5>/Unit Delay' */
-  uint32_T raptor_delta_time_DWORK1;   /* '<S5>/raptor_delta_time' */
-  boolean_T DelayInput1_DSTATE;        /* '<S9>/Delay Input1' */
-  boolean_T UnitDelay2_DSTATE;         /* '<S5>/Unit Delay2' */
-  boolean_T UnitDelay_DSTATE_e;        /* '<S4>/Unit Delay' */
-  boolean_T UnitDelay1_DSTATE;         /* '<S4>/Unit Delay1' */
+  real_T UnitDelay_DSTATE_b;           /* '<S6>/Unit Delay' */
+  uint32_T raptor_delta_time_DWORK1;   /* '<S6>/raptor_delta_time' */
+  boolean_T DelayInput1_DSTATE;        /* '<S10>/Delay Input1' */
+  boolean_T UnitDelay2_DSTATE;         /* '<S6>/Unit Delay2' */
+  boolean_T UnitDelay_DSTATE_e;        /* '<S5>/Unit Delay' */
+  boolean_T UnitDelay1_DSTATE;         /* '<S5>/Unit Delay1' */
 } D_Work_Reha_Rap01;
 
 /* Zero-crossing (trigger) state */
 typedef struct {
-  ZCSigState StoreEEPROM_Trig_ZCE;     /* '<S4>/Store EEPROM' */
-  ZCSigState RaiseStartupEvent_Trig_ZCE;/* '<S4>/Raise Startup Event' */
-  ZCSigState RaiseShutdownEvent_Trig_ZCE;/* '<S4>/Raise Shutdown Event' */
+  ZCSigState StoreEEPROM_Trig_ZCE;     /* '<S5>/Store EEPROM' */
+  ZCSigState RaiseStartupEvent_Trig_ZCE;/* '<S5>/Raise Startup Event' */
+  ZCSigState RaiseShutdownEvent_Trig_ZCE;/* '<S5>/Raise Shutdown Event' */
 } PrevZCSigStates_Reha_Rap01;
 
 /* Constant parameters (default storage) */
 typedef struct {
   /* Computed Parameter: Logic_table
-   * Referenced by: '<S5>/Logic'
+   * Referenced by: '<S6>/Logic'
    */
   boolean_T Logic_table[8];
 } ConstParam_Reha_Rap01;
@@ -96,15 +98,16 @@ extern void Reha_Rap01_terminate(void);
  * '<S1>'   : 'Reha_Rap01/Foreground'
  * '<S2>'   : 'Reha_Rap01/Power Up_Down'
  * '<S3>'   : 'Reha_Rap01/raptor_xcp_def'
- * '<S4>'   : 'Reha_Rap01/Power Up_Down/Background'
- * '<S5>'   : 'Reha_Rap01/Power Up_Down/Background/Debounce'
- * '<S6>'   : 'Reha_Rap01/Power Up_Down/Background/Raise Shutdown Event'
- * '<S7>'   : 'Reha_Rap01/Power Up_Down/Background/Raise Startup Event'
- * '<S8>'   : 'Reha_Rap01/Power Up_Down/Background/Store EEPROM'
- * '<S9>'   : 'Reha_Rap01/Power Up_Down/Background/Debounce/Detect Change'
- * '<S10>'  : 'Reha_Rap01/Power Up_Down/Background/Raise Shutdown Event/raptor_shutdown'
- * '<S11>'  : 'Reha_Rap01/Power Up_Down/Background/Raise Startup Event/raptor_startup'
- * '<S12>'  : 'Reha_Rap01/Power Up_Down/Background/Store EEPROM/raptor_store_nv'
+ * '<S4>'   : 'Reha_Rap01/Foreground/Subsystem Reference'
+ * '<S5>'   : 'Reha_Rap01/Power Up_Down/Background'
+ * '<S6>'   : 'Reha_Rap01/Power Up_Down/Background/Debounce'
+ * '<S7>'   : 'Reha_Rap01/Power Up_Down/Background/Raise Shutdown Event'
+ * '<S8>'   : 'Reha_Rap01/Power Up_Down/Background/Raise Startup Event'
+ * '<S9>'   : 'Reha_Rap01/Power Up_Down/Background/Store EEPROM'
+ * '<S10>'  : 'Reha_Rap01/Power Up_Down/Background/Debounce/Detect Change'
+ * '<S11>'  : 'Reha_Rap01/Power Up_Down/Background/Raise Shutdown Event/raptor_shutdown'
+ * '<S12>'  : 'Reha_Rap01/Power Up_Down/Background/Raise Startup Event/raptor_startup'
+ * '<S13>'  : 'Reha_Rap01/Power Up_Down/Background/Store EEPROM/raptor_store_nv'
  */
 #endif                                 /* RTW_HEADER_Reha_Rap01_h_ */
 

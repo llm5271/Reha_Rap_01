@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Reha_Rap01'.
  *
- * Model version                  : 9.1
+ * Model version                  : 9.32
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Thu Sep  8 15:20:17 2022
+ * C/C++ source code generated on : Sat Sep 10 17:18:14 2022
  *
  * Target selection: raptor.tlc
  * Embedded hardware selection: Infineon->TriCore
@@ -20,6 +20,9 @@
 #include "rtwtypes.h"
 #include "zero_crossing_types.h"
 #include "Reha_Rap01.h"
+
+/* Includes for objects with custom storage classes */
+#include "data.h"
 
 extern uint16_T crc16_spd(void* in, uint32_T length, uint16_T prevCRC);
 boolean_T is_crc_valid(void * buffer, uint32_T buffer_size, uint16_T checkCrc);

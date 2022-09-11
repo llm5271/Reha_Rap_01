@@ -1,4 +1,6 @@
 .\_buildgen\Objects\can_can1.o
+.\_buildgen\Objects\can_can2.o
+.\_buildgen\Objects\can_can3.o
 .\_buildgen\Objects\can_general.o
 .\_buildgen\Objects\data.o
 .\_buildgen\Objects\hw_user.o

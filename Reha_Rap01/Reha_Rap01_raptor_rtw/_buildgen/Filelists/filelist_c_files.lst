@@ -1,4 +1,6 @@
 can_can1.c
+can_can2.c
+can_can3.c
 can_general.c
 data.c
 hw_user.c

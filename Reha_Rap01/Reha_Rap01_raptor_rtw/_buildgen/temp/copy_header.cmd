@@ -1,5 +1,7 @@
 @echo off
 copy can_can1.h _buildgen\Headers >nul || (echo cannot copy can_can1.h to _buildgen\Headers && exit 1 )
+copy can_can2.h _buildgen\Headers >nul || (echo cannot copy can_can2.h to _buildgen\Headers && exit 1 )
+copy can_can3.h _buildgen\Headers >nul || (echo cannot copy can_can3.h to _buildgen\Headers && exit 1 )
 copy can_general.h _buildgen\Headers >nul || (echo cannot copy can_general.h to _buildgen\Headers && exit 1 )
 copy data.h _buildgen\Headers >nul || (echo cannot copy data.h to _buildgen\Headers && exit 1 )
 copy data_api.h _buildgen\Headers >nul || (echo cannot copy data_api.h to _buildgen\Headers && exit 1 )

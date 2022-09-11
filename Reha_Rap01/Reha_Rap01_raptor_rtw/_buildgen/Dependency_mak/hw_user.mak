@@ -18,7 +18,8 @@ _buildgen/Objects/hw_user.o: hw_user.c _buildgen/headers/Reha_Rap01.h \
   _buildgen/headers/STD_TYPE.H _buildgen/headers/syc_postdrv_pub.h \
   _buildgen/headers/sws_pwmout.h _buildgen/headers/swadp_pub.h \
   _buildgen/headers/xcp_protocol.h _buildgen/headers/math_defines.h \
-  _buildgen/headers/can_CAN1.h _buildgen/headers/Reha_Rap01_private.h \
+  _buildgen/headers/can_CAN1.h _buildgen/headers/can_CAN2.h \
+  _buildgen/headers/can_CAN3.h _buildgen/headers/Reha_Rap01_private.h \
   _buildgen/headers/hw_user.h _buildgen/headers/time.h \
   _buildgen/headers/sws_can.h _buildgen/headers/can.h \
   _buildgen/headers/reg.h _buildgen/headers/can_1793.h \

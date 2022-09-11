@@ -5,7 +5,7 @@ SYS_TARGET_FILE = raptor.tlc
 SHELL           = cmd
 
 MODEL_NAME		= Reha_Rap01
-MODULES			= Reha_Rap01_data.c Timer_BGND_G6Wyo.c Timer_ooqlV.c XCP_App.c can_CAN1.c can_general.c data.c hw_user.c raptorCRC.c raptor_delta_time.c time.c xcp_protocol.c XCP_App.c.c
+MODULES			= Reha_Rap01_data.c Timer_BGND_G6Wyo.c Timer_ooqlV.c XCP_App.c can_CAN1.c can_CAN2.c can_CAN3.c can_general.c data.c hw_user.c raptorCRC.c raptor_delta_time.c time.c xcp_protocol.c XCP_App.c.c
 NUMST           = 
 MODEL_HAS_DYNAMICALLY_LOADED_SFCNS =
 NCSTATES =

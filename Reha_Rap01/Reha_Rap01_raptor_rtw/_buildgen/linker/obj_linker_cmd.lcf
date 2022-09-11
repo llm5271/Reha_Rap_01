@@ -69,6 +69,8 @@ object_files/can2frm.o
 object_files/can_auto_conf.o
 object_files/can_busoffintr.o
 _buildgen/Objects/can_can1.o
+_buildgen/Objects/can_can2.o
+_buildgen/Objects/can_can3.o
 object_files/can_changebaudrate.o
 object_files/can_changemsgid.o
 object_files/can_changetxrx.o
